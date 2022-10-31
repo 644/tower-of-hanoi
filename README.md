@@ -1,4 +1,4 @@
-# Tower of Hanoi
+# Simpler Iterative Tower of Hanoi
 It's quite similar to the already existing iterative solutions, but I've found it's not necessary to know which peg the disks are on, or which peg a disk will move to.
 
 All that needs to be known is the direction (UP/DOWN), which alternates for each disk and is determined by the parity of the number of disks.

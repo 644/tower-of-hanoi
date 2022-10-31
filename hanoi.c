@@ -20,18 +20,17 @@
  *
  * It is pretty similar to binary counting and the Gray code solutions, but when solving it I chose not to do any research beyond knowing the rules of the game. If I had looked up the solutions beforehand, I probably wouldn't have come up with this one.
  * 
- * Also this probably isn't the best implementation for this algorithm, as it's extremely hacky, but at least it's fast. And only 58 lines of assembly gets generated with -Ofast, so have fun blowing up your CPU!
+ * Also this probably isn't the best implementation for this algorithm, as it's extremely hacky, but at least it's fast. And only 110 lines of assembly gets generated with -Ofast, so have fun blowing up your CPU!
  */
 
 #include <stdio.h>
+#include <stdlib.h>
 
-static const int ring_count = 4;
-static const int total_moves = (1 << ring_count) - 1;
-static const int is_odd = ring_count & 1;
-
-void solve_hanoi(){
+void solve_hanoi(const int ring_count){
+    int total_moves = (1 << ring_count) - 1;
+    int is_odd = ring_count & 1;
     int move_order[total_moves];
-
+    
     for(int i=0; i<ring_count; i++){
         int c_ring_pos = 1 << i;
         int inc_amount = 1 << (i+1);
@@ -41,7 +40,7 @@ void solve_hanoi(){
             move_order[c_ring_pos-1] = 'A'+i;
         }
     }
-
+    
     for(int i=0; i<total_moves; i++){
         if(move_order[i]+is_odd & 1){
             printf("%c UP\n", move_order[i]);
@@ -51,7 +50,17 @@ void solve_hanoi(){
     }
 }
 
-int main(){
-    solve_hanoi();
+int main(int argc, char *argv[]){
+    if(argc != 2){
+        return 1;
+    }
+    
+    int r = atoi(argv[1]);
+    if(r > 20){
+        r = 20;
+    }
+    
+    solve_hanoi(r);
+    
     return 0;
 }

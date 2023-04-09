@@ -1,6 +1,8 @@
 # Simpler Iterative Tower of Hanoi
 
-[disks.webm](https://user-images.githubusercontent.com/17060633/230754345-37078ead-078e-40e8-8e7f-3e3c3e5fdd4e.webm)
+This algorithm is so simple it makes larger stacks quite easy to do manually
+
+[manual-hanoi.webm](https://user-images.githubusercontent.com/17060633/230754635-05195e06-ba4f-4d37-be75-b84bdff50171.webm)
 
 ---
 
@@ -70,6 +72,4 @@ cpu	99.23
 
 ---
 
-Also, the algorithm is so simple it makes even larger stacks of disks quite easy to do manually
-
-[manual-hanoi.webm](https://user-images.githubusercontent.com/17060633/230754635-05195e06-ba4f-4d37-be75-b84bdff50171.webm)
+[disks.webm](https://user-images.githubusercontent.com/17060633/230754345-37078ead-078e-40e8-8e7f-3e3c3e5fdd4e.webm)

@@ -1,4 +1,9 @@
 # Simpler Iterative Tower of Hanoi
+
+[disks.webm](https://user-images.githubusercontent.com/17060633/230754345-37078ead-078e-40e8-8e7f-3e3c3e5fdd4e.webm)
+
+---
+
 It's quite similar to the already existing iterative solutions, but I've found it's not necessary to know which peg the disks are on, or which peg a disk will move to.
 
 All that needs to be known is the direction (UP/DOWN), which alternates for each disk and is determined by the parity of the number of disks.
@@ -62,3 +67,9 @@ user	0.059
 sys	0.003
 cpu	99.23
 ```
+
+---
+
+Also, the algorithm is so simple it makes even larger stacks of disks quite easy to do manually
+
+[manual-hanoi.webm](https://user-images.githubusercontent.com/17060633/230754635-05195e06-ba4f-4d37-be75-b84bdff50171.webm)
